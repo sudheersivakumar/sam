@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>P. Naga Sukeerthi - Data Analyst Portfolio</title>
+    <style>
+        /* CSS styles */
+        :root {
+            --primary-color: #00a8ff;
+            --secondary-color: #2c3e50;
+            --text-color: #ffffff;
+            --background-color: #121212;
+            --card-background: #1e1e1e;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--background-color);
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+            padding: 0 20px;
+        }
+
+        header {
+            background: var(--secondary-color);
+            color: #fff;
+            padding-top: 30px;
+            min-height: 70px;
+            border-bottom: var(--primary-color) 3px solid;
+        }
+
+        header a {
+            color: #fff;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 16px;
+        }
+
+        header li {
+            float: left;
+            display: inline;
+            padding: 0 20px 0 20px;
+        }
+
+        header #branding {
+            float: left;
+        }
+
+        header #branding h1 {
+            margin: 0;
+        }
+
+        header nav {
+            float: right;
+            margin-top: 10px;
+        }
+
+        header .highlight, header .current a {
+            color: var(--primary-color);
+            font-weight: bold;
+        }
+
+        header a:hover {
+            color: var(--primary-color);
+            font-weight: bold;
+        }
+
+        #showcase {
+            min-height: 400px;
+            background: url('https://source.unsplash.com/1600x900/?data,analysis') no-repeat center center/cover;
+            text-align: center;
+            color: #fff;
+            position: relative;
+        }
+
+        #showcase::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            z-index: 1;
+        }
+
+        #showcase .container {
+            position: relative;
+            z-index: 2;
+        }
+
+        #showcase h1 {
+            margin-top: 100px;
+            font-size: 55px;
+            margin-bottom: 10px;
+        }
+
+        #showcase p {
+            font-size: 20px;
+        }
+
+        #main {
+            padding: 30px 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        #main > div {
+            flex-basis: 100%;
+            margin-bottom: 20px;
+        }
+
+        @media (min-width: 768px) {
+            #main > div {
+                flex-basis: 48%;
+            }
+        }
+
+        .section-title {
+            font-size: 24px;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+
+        .skill-list, .project-list, .education-list, .certification-list {
+            list-style-type: none;
+        }
+
+        .skill-list li, .project-list li, .education-list li, .certification-list li {
+            background: var(--card-background);
+            margin-bottom: 5px;
+            padding: 10px;
+            border-radius: 5px;
+            transition: transform 0.3s ease;
+        }
+
+        .skill-list li:hover, .project-list li:hover, .education-list li:hover, .certification-list li:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0, 168, 255, 0.2);
+        }
+
+        .project-list li {
+            margin-bottom: 15px;
+            cursor: pointer;
+        }
+
+        footer {
+            padding: 20px;
+            margin-top: 20px;
+            color: #ffffff;
+            background-color: var(--secondary-color);
+            text-align: center;
+        }
+
+        /* Modal styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 3;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.8);
+        }
+
+        .modal-content {
+            background-color: var(--card-background);
+            margin: 15% auto;
+            padding: 20px;
+            border: 1px solid var(--primary-color);
+            width: 80%;
+            max-width: 600px;
+            color: var(--text-color);
+        }
+
+        .close {
+            color: var(--primary-color);
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: var(--text-color);
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div id="branding">
+                <h1><span class="highlight">P. Naga Sukeerthi</span> Data Analyst</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li class="current"><a href="#showcase">Home</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#education">Education</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="showcase">
+        <div class="container">
+            <h1>Data Analyst Portfolio</h1>
+            <p>Transforming data into actionable insights</p>
+        </div>
+    </section>
+
+    <section id="main">
+        <div class="container">
+            <div id="skills">
+                <h2 class="section-title">Skills</h2>
+                <ul class="skill-list">
+                    <li>Python (Pandas, NumPy, Matplotlib, Seaborn, TensorFlow)</li>
+                    <li>Machine Learning & Statistical Analysis</li>
+                    <li>Data Visualization (Tableau)</li>
+                    <li>SQL & Database Management</li>
+                    <li>Excel & PowerPoint</li>
+                    <li>Communication & Teamwork</li>
+                    <li>Problem-Solving & Time Management</li>
+                </ul>
+            </div>
+
+            <div id="projects">
+                <h2 class="section-title">Projects</h2>
+                <ul class="project-list">
+                    <li>
+                        <h3>Titanic Survival Prediction</h3>
+                        <p>Developed a Machine Learning model using Logistic Regression and Random Forest algorithms to predict Titanic passenger survival. Performed EDA and created data visualizations to present critical insights.</p>
+                    </li>
+                    <li>
+                        <h3>Sales Prediction Using Python</h3>
+                        <p>Built a sales prediction model using Linear Regression and Time Series Analysis. Analyzed historical data to improve predictive accuracy and leveraged data visualization for enhanced decision-making.</p>
+                    </li>
+                    <li>
+                        <h3>Text Summarization Tool</h3>
+                        <p>Created a text summarization tool using NLP techniques to condense large documents while retaining key information. Applied advanced algorithms to improve efficiency and maintain content relevance.</p>
+                    </li>
+                </ul>
+            </div>
+
+            <div id="education">
+                <h2 class="section-title">Education</h2>
+                <ul class="education-list">
+                    <li>
+                        <h3>Master's in Data Science</h3>
+                        <p>Vellore Institute of Technology, Andhra Pradesh (2023-2025)</p>
+                    </li>
+                    <li>
+                        <h3>Bachelor of Science in Statistics</h3>
+                        <p>Abhyudaya Mahila Degree College, Andhra Pradesh (2020-2023)</p>
+                    </li>
+                </ul>
+            </div>
+
+            <div id="certifications">
+                <h2 class="section-title">Certifications</h2>
+                <ul class="certification-list">
+                    <li>Accenture Data Analytics course - Forage</li>
+                    <li>Python Full Stack Certificate</li>
+                    <li>Ask Questions to Make Data-Driven Decisions - Coursera</li>
+                    <li>Foundations: Data, Data, Everywhere - Coursera</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 P. Naga Sukeerthi. All rights reserved.</p>
+    </footer>
+
+    <!-- Modal -->
+    <div id="projectModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 id="modalTitle"></h2>
+            <p id="modalDescription"></p>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript for modal functionality
+        const modal = document.getElementById("projectModal");
+        const modalTitle = document.getElementById("modalTitle");
+        const modalDescription = document.getElementById("modalDescription");
+        const span = document.getElementsByClassName("close")[0];
+
+        // Get all project list items
+        const projects = document.querySelectorAll('.project-list li');
+
+        // Add click event to each project
+        projects.forEach(project => {
+            project.addEventListener('click', function() {
+                const title = this.querySelector('h3').textContent;
+                const description = this.querySelector('p').textContent;
+                modalTitle.textContent = title;
+                modalDescription.textContent = description;
+                modal.style.display = "block";
+            });
+        });
+
+        // Close modal when clicking on <span> (x)
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        // Close modal when clicking outside of it
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+
+        // Smooth scrolling for navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
